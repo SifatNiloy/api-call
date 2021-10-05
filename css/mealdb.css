@@ -1,0 +1,9 @@
+body{
+    background-color: rgb(212, 236, 212);
+    padding: 3%;
+}
+#meal-details{
+    padding-bottom: 5%;
+    max-width:40%;
+    
+}

@@ -10,7 +10,7 @@ const searchFood = () => {
     }
     else {
         // load data
-        
+
         fetch(url)
             .then(res => res.json())
             .then(data => displaySearchResult(data.meals))
@@ -53,6 +53,7 @@ const loadMealDetail = mealId => {
 const displayMealDetail = meal => {
     console.log(meal);
     const mealDetails = document.getElementById('meal-details');
+    mealDetails.textContent = '';
     const div = document.createElement('div')
     div.classList.add('card');
     div.innerHTML = `
@@ -60,7 +61,7 @@ const displayMealDetail = meal => {
     <div class="card-body">
       <h5 class="card-title">${meal.strMeal}</h5>
       <p class="card-text">${meal.strInstructions.slice(0, 150)}.</p>
-      <a href="${meal.strYoutube}" class="btn btn-primary">Go somewhere</a>
+      <a href="${meal.strYoutube}" class="btn btn-primary">Go to link</a>
     </div>
     `
     mealDetails.appendChild(div);
